@@ -7,6 +7,7 @@ class AliasMapper extends Stimulus.Controller {
             'alias',
             'name',
             'aliasSelect',
+            'submitButton',
         ]
     }
 
@@ -26,16 +27,25 @@ class AliasMapper extends Stimulus.Controller {
     }
     
     handleFetchAlias(alias) {
+
+        // TO DO - what if this is called before the last request is done, and the last request takes longer
+        // disable reveal name until this returns
         this.aliasTarget.textContent = alias
+        this.submitButtonTarget.setAttribute("disabled", true)
         this.nameTarget.textContent = "..."
-        console.log('fetching', alias);
-        // fetch(`/api/endpoint?alias=${encodeURIComponent(alias)}`)
-        fetch(`api/endpoint`)
-        // fetch(`api/endpoint?alias=${encodeURIComponent(alias)}`)
+        fetch(`api/endpoint.php?alias=${encodeURIComponent(alias)}`)
             .then(response => response.text())
-            .then(data => {
-                console.log(data);
-                
+            .then((name) => {
+
+                const resolvedName = name === "null" ? 
+                    "<unknown>" : 
+                    name.replace(/"/g, "")
+
+                this.nameTarget.textContent = resolvedName
+                this.submitButtonTarget.removeAttribute("disabled")
+            })
+            .catch(() => {
+                this.submitButtonTarget.removeAttribute("disabled")
             })
         
     }

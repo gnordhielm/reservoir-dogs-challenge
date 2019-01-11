@@ -34,12 +34,12 @@ class AliasMapper extends Stimulus.Controller {
         this.submitButtonTarget.setAttribute("disabled", true)
         this.nameTarget.textContent = "..."
         fetch(`api/endpoint.php?alias=${encodeURIComponent(alias)}`)
-            .then(response => response.text())
+            .then(response => response.json())
             .then((name) => {
 
-                const resolvedName = name === "null" ? 
+                const resolvedName = name === null ? 
                     "<unknown>" : 
-                    name.replace(/"/g, "")
+                    name
 
                 this.nameTarget.textContent = resolvedName
                 this.submitButtonTarget.removeAttribute("disabled")

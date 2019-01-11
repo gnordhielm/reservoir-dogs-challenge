@@ -1,0 +1,11 @@
+{
+  "name": "@allboatsrise/reservoir-dogs-challenge",
+  "version": "0.1.0",
+  "description": "Simple exercise to test comfort with different technologies and libraries.",
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "stimulus": "^1.1.1"
+  },
+  "author": "Andrej Pavlovic <apavlovic@allboatsrise.com>",
+  "license": "UNLICENSED"
+}

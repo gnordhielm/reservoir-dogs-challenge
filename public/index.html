@@ -9,9 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/__nav.css">
-  <link rel="stylesheet" href="css/__header.css">
-  <link rel="stylesheet" href="css/__arrow-container.css">
+  <link rel="stylesheet" href="css/components.css">
 
 </head>
 <body>
@@ -28,34 +26,34 @@
       </div>
     </div>
 
-    <div class="__header row">
+    <div class="__header flex-center row">
       <div class="_text-overlay">
         <div class="row">
-          <div class="col-1 _offset-col"></div>
+          <div class="col-1 quarter-inset-col"></div>
           <div class="col-6">
             <h1>All Boats Rise <br> — Reservoir Dogs International Development Test</h1>
           </div>
         </div>
         <div class="row">
-          <div class="col-1 _offset-col"></div>
-          <div class="col-1 _divider _offset-col"></div>
+          <div class="col-1 quarter-inset-col"></div>
+          <div class="col-1 _divider quarter-inset-col"></div>
           <div class="col-2 _divider"></div>
         </div>
         <div class="row">
-          <div class="col-1 _offset-col"></div>
+          <div class="col-1 quarter-inset-col"></div>
           <div class="col-6">
               <h2>We're here to do marketing and <br> perfect diamond heists. Any Questions?</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-1 _offset-col"></div>
+          <div class="col-1 quarter-inset-col"></div>
           <div class="col-6">
-              <h3>(And make some sweet latte art)</h3>
+              <h4>(And make some sweet latte art)</h4>
           </div>
         </div>
       </div>
       <div class="col-3"></div>
-      <div class="col-9">
+      <div class="col-9 full-height">
         <img class="_hero-image" src="png/walking.png" />
       </div>
     </div>
@@ -66,29 +64,85 @@
 
     <div class="__mission">
 
-    </div>
-
-    <div data-controller="AliasMapper">
-      <form action="" data-target="AliasMapper.form">
-        <select name="alias" required data-target="AliasMapper.aliasSelect">
-          <option value="">--- Choose Alias ---</option>
-          <option value="Mr. White">Mr. White</option>
-          <option value="Mr. Orange">Mr. Orange</option>
-          <option value="Mr. Blonde">Mr. Blonde</option>
-          <option value="Mr. Pink">Mr. Pink</option>
-          <option value="Mr. Blue">Mr. Blue</option>
-          <option value="Mr. Brown">Mr. Brown</option>
-          <option value="Mr. Purple">Mr. Purple</option>
-        </select>
-        <input type="submit" value="Reveal Name" data-target="AliasMapper.submitButton"/>
-      </form>
-
-      <!-- Display Alias mapping result -->
-      <div class="output">
-        <h3 class="label">Output:</h3>
-        Alias <span class="name" data-target="AliasMapper.alias">...</span>
-        maps to <span class="color" data-target="AliasMapper.name">...</span>.
+      <div class="_background-decoration-container row">
+        <div class="col-2"></div>
+        <div class="quarter-offset-col"></div>
+        <div class="_background-decoration col-half"></div>
+        <div class="_background-decoration col-7"></div>
       </div>
+
+      <div class="_statement row">
+        <div class="col-1 half-offset-col"></div>
+        <div class="col-3">
+          <h3>We're On A Mission</h3>
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus varius nibh vitae sodales. Cras sit amet sapien malesuada, sollicitudin turpis et, finibus metus. Maecenas convallis ex ut scelerisque sodales. Nulla venenatis risus pulvinar odio egestas tincidunt. Vestibulum rutrum, risus tempus ullamcorper.
+          </p>
+        </div>
+      </div>
+
+      <div class="_video-row row">
+        <div class="col-5"></div>
+        <div class="col-quarter"></div>
+        <div class="_video col-fill flex-center">
+          <img class="_play" src="png/play.png" />
+          <img class="_still" src="png/video.png" />
+          <div class="_border"></div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+
+      <div class="row _portrait-row">
+        <div class="col-half"></div>
+        <div class="col-half">
+          <p class="_portrait-text">
+            <span class="red-text">01</span>
+            <img class="_text-divider" src="png/text-divider.png" />
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing
+            </span>
+          </p>
+        </div>
+        <div class="col-fill">
+            <img class="_portrait" src="png/portrait.png" />
+        </div>
+        <div class="col-half"></div>
+        <div class="col-7"></div>
+      </div>
+
+      <div class="row _alias-row" data-controller="AliasMapper">
+          <div class="col-half"></div>
+          <div class="col-5"></div>
+          <div class="col-fill">
+            <form action="" data-target="AliasMapper.form">
+              <div class="select-wrapper">
+                <span class="__arrow"></span>
+                <select name="alias" required data-target="AliasMapper.aliasSelect">
+                  <option disabled hidden selected value="">Pick a name here</option>
+                  <option value="Mr. White">Mr. White</option>
+                  <option value="Mr. Orange">Mr. Orange</option>
+                  <option value="Mr. Blonde">Mr. Blonde</option>
+                  <option value="Mr. Pink">Mr. Pink</option>
+                  <option value="Mr. Blue">Mr. Blue</option>
+                  <option value="Mr. Brown">Mr. Brown</option>
+                  <option value="Mr. Purple">Mr. Purple</option>
+                </select>
+              </div>
+              <input class="_alias-submit" type="submit" value="/ Submit" data-target="AliasMapper.submitButton"/>
+            </form>
+            <div class="_alias-result" data-target="AliasMapper.aliasMessage" data-invisible="true">
+              <div class="_content">
+                <span> /</span>
+                <span data-target="AliasMapper.alias"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-half"></div>
+          <div class="col-1"></div>
+      </div>
+
+      <div class="_bottom-padding-row"></div>
+
     </div>
   </div>
 

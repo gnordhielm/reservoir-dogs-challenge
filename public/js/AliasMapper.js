@@ -4,7 +4,7 @@ class AliasMapper extends Stimulus.Controller {
         return [
             'form',
             'alias',
-            'name',
+            'aliasMessage',
             'aliasSelect',
             'submitButton',
         ]
@@ -24,9 +24,8 @@ class AliasMapper extends Stimulus.Controller {
     }
     
     handleFetchAlias(alias) {
-        this.aliasTarget.textContent = alias
+        this.aliasMessageTarget.setAttribute("data-invisible", true)
         this.submitButtonTarget.setAttribute("disabled", true)
-        this.nameTarget.textContent = "..."
         fetch(`api/endpoint.php?alias=${encodeURIComponent(alias)}`)
             .then(response => response.json())
             .then((name) => {
@@ -35,7 +34,8 @@ class AliasMapper extends Stimulus.Controller {
                     "<unknown>" : 
                     name
 
-                this.nameTarget.textContent = resolvedName
+                this.aliasTarget.textContent = resolvedName
+                this.aliasMessageTarget.setAttribute("data-invisible", false)
                 this.submitButtonTarget.removeAttribute("disabled")
             })
             .catch(() => {

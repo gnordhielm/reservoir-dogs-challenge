@@ -62,3 +62,29 @@
   flex: 0 0 100%;
   max-width: 100%;
 }
+
+.quarter-inset-col {
+  margin-right: -2.083333333%;
+}
+
+.quarter-offset-col {
+  margin-right: 2.083333333%;
+}
+
+.half-offset-col {
+  margin-right: 4.166666667%;
+}
+
+.col-half {
+  flex: 0 0 4.166666667%;
+  max-width: 4.166666667%;
+}
+
+.col-quarter {
+  flex: 0 0 2.083333333%;
+  max-width: 2.083333333%;
+}
+
+.col-fill {
+  flex: 1;
+}

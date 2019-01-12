@@ -1,4 +1,3 @@
-// AliasMapper controller
 class AliasMapper extends Stimulus.Controller {
     
     static get targets() {
@@ -12,8 +11,6 @@ class AliasMapper extends Stimulus.Controller {
     }
 
     initialize() {
-        // this.handleFormSubmit = 
-
         this.formTarget.addEventListener(
             'submit', 
             this.handleFormSubmit.bind(this)
@@ -27,9 +24,6 @@ class AliasMapper extends Stimulus.Controller {
     }
     
     handleFetchAlias(alias) {
-
-        // TO DO - what if this is called before the last request is done, and the last request takes longer
-        // disable reveal name until this returns
         this.aliasTarget.textContent = alias
         this.submitButtonTarget.setAttribute("disabled", true)
         this.nameTarget.textContent = "..."

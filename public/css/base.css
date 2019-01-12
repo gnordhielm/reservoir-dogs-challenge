@@ -2,6 +2,9 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  color: #000913;
 }
 
 .wrapper {
@@ -9,13 +12,50 @@ body {
   height: 100%;
   overflow: auto;
 
-  padding: 50px 20px;
   box-sizing: border-box;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4.4rem;
+  font-weight: 800;
+  letter-spacing: 0.45rem;
+  margin-bottom: 38px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+.flex-center {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.wrapper [data-controller="AbrPersonFavoriteColor"] {
-  max-width: 500px;
+.link {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.link:hover {
+  color: #c4090a;
 }

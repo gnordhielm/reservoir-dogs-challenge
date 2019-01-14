@@ -12,7 +12,6 @@ body {
   height: 100%;
   overflow: auto;
   margin: 0 auto;
-  max-width: 1200px;
   box-sizing: border-box;
 }
 
@@ -21,8 +20,14 @@ h1 {
   font-size: 4.4rem;
   font-weight: 800;
   letter-spacing: 0.45rem;
-  margin-bottom: 38px;
   margin: 0;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+  }
 }
 
 h2 {
@@ -31,6 +36,14 @@ h2 {
   font-weight: 400;
   letter-spacing: 0.1rem;
   margin: 0;
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+  }
 }
 
 h3 {
@@ -47,6 +60,13 @@ h4 {
   font-weight: 400;
   letter-spacing: 0.1rem;
   margin: 0;
+}
+
+@media (max-width: 800px) {
+  h4 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 }
 
 p {
@@ -76,8 +96,21 @@ p {
   cursor: pointer;
 }
 
+@media (max-width: 800px) {
+  .link {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
 .link:not(:last-child) {
   margin-right: 30px;
+}
+
+@media (max-width: 800px) {
+  .link:not(:last-child) {
+    margin-right: 10px;;
+  }
 }
 
 .link:hover {
@@ -101,7 +134,7 @@ input[type="submit"] {
 .select-wrapper {
   position: relative;
   display: inline-block;
-  width: 75%;
+  width: calc(100% - 125px);;
   cursor: pointer;
 }
 
@@ -119,7 +152,6 @@ input[type="submit"] {
   letter-spacing: 0.05rem;
   -webkit-appearance: none;
 }
-/* Select arrow styling */
 
 .select-wrapper > .__arrow {
   width: 15px;
@@ -130,4 +162,28 @@ input[type="submit"] {
   right: 23px;
   background: url("../png/select-arrow.png") right / 90% no-repeat #fff;
   pointer-events: none;
+}
+
+.grow-hide {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .shrink-hide {
+    display: none;
+  }
+
+  .grow-hide {
+    display: block;
+  }
+  
+  .shrink-flex-start {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .shrink-flex-center {
+    display: flex;
+    align-items: center;
+  }
 }

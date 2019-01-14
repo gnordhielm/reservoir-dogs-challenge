@@ -15,23 +15,23 @@
 <body>
   <div class="wrapper">
 
-    <div class="__nav row">
+    <div class="__nav row row-shrink-stack">
       <div class="col-3 flex-center">
         <img class="_logo" src="png/logo.png" />
       </div>
-      <div class="flex-center col-9">
+      <div class="flex-center col-9 _nav-links">
         <span class="link">Register</span>
         <span class="link">Purchase a Boat</span>
         <span class="link">Latte Art Requests</span>
       </div>
     </div>
 
-    <div class="__header flex-center row">
+    <div class="__header flex-center shrink-flex-start row">
       <div class="_text-overlay">
-        <div class="row">
+        <div class="row row-shrink-stack">
           <div class="col-1 quarter-inset-col"></div>
           <div class="col-6">
-            <h1>All Boats Rise <br> — Reservoir Dogs International Development Test</h1>
+            <h1 class="_hero-title">All Boats Rise <br> — Reservoir Dogs International Development Test</h1>
           </div>
         </div>
         <div class="row">
@@ -42,13 +42,13 @@
         <div class="row">
           <div class="col-1 quarter-inset-col"></div>
           <div class="col-6">
-              <h2>We're here to do marketing and <br> perfect diamond heists. Any Questions?</h2>
+              <h2 class="_hero-subtitle">We're here to do marketing and <br class="shrink-hide"> perfect diamond heists. Any Questions?</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-1 quarter-inset-col"></div>
           <div class="col-6">
-              <h4>(And make some sweet latte art)</h4>
+              <h4 class="_hero-etc">(And make some sweet latte art)</h4>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
 
       <div class="_statement row">
         <div class="col-1 half-offset-col"></div>
-        <div class="col-3">
+        <div class="col-3 shrink-col-7">
           <h3>We're On A Mission</h3>
           <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus varius nibh vitae sodales. Cras sit amet sapien malesuada, sollicitudin turpis et, finibus metus. Maecenas convallis ex ut scelerisque sodales. Nulla venenatis risus pulvinar odio egestas tincidunt. Vestibulum rutrum, risus tempus ullamcorper.
@@ -82,7 +82,7 @@
       </div>
 
       <div class="_video-row row">
-        <div class="col-5"></div>
+        <div class="col-5 shrink-col-1"></div>
         <div class="col-quarter"></div>
         <div class="_video col-fill flex-center">
           <img class="_play" src="png/play.png" />
@@ -94,25 +94,25 @@
 
       <div class="row _portrait-row">
         <div class="col-half"></div>
-        <div class="col-half">
+        <div class="col-half shrink-col-2">
           <p class="_portrait-text">
             <span class="red-text">01</span>
             <img class="_text-divider" src="png/text-divider.png" />
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
+              Lorem ipsum dolor sit amet, <br class="grow-hide">consectetur adipiscing
             </span>
           </p>
         </div>
-        <div class="col-fill">
+        <div class="col-fill shrink-flex-center">
             <img class="_portrait" src="png/portrait.png" />
         </div>
         <div class="col-half"></div>
-        <div class="col-7"></div>
+        <div class="col-7 shrink-col-4"></div>
       </div>
 
       <div class="row _alias-row" data-controller="AliasMapper">
           <div class="col-half"></div>
-          <div class="col-5"></div>
+          <div class="col-5 shrink-col-1"></div>
           <div class="col-fill">
             <form action="" data-target="AliasMapper.form">
               <div class="select-wrapper">
@@ -132,7 +132,6 @@
             </form>
             <div class="_alias-result" data-target="AliasMapper.aliasMessage" data-invisible="true">
               <div class="_content">
-                <span> /</span>
                 <span data-target="AliasMapper.alias"></span>
               </div>
             </div>

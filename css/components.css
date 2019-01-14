@@ -34,7 +34,7 @@
 
 .wrapper > .__header {
   height: calc(100% - (82.5px + 74px));
-  min-height: calc(530px - (82.5px + 74px));
+  min-height: calc(600px - (82.5px + 74px));
   position: relative;
 }
 

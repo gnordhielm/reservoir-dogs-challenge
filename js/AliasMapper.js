@@ -31,7 +31,6 @@ class AliasMapper extends Stimulus.Controller {
         e.preventDefault()
         const alias = this.aliasSelectTarget.value
         this.handleFetchAlias(alias)
-        return false
     }
     
     handleFetchAlias(alias) {

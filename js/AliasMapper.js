@@ -40,8 +40,6 @@ class AliasMapper extends Stimulus.Controller {
         setTimeout(() => {
 
             const name = names[alias]
-            console.log(name, alias);
-            
 
             const resolvedName = name === null ? 
                 "<unknown>" : 

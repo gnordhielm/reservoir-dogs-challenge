@@ -5,6 +5,7 @@ const names = {
     "Mr. Pink": null,
     "Mr. Blue": null,
     "Mr. Brown": null,
+    "Mr. Purple": null,
 }
 
 class AliasMapper extends Stimulus.Controller {
